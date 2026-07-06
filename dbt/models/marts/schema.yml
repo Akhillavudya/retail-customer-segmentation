@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: mart_value_tiers
+    description: "Behavioral profile + revenue concentration by value tier (4 rows)."
+    columns:
+      - name: value_tier
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+              values: ['Champions', 'Loyalists', 'Potential', 'At-Risk']
+
+  - name: mart_loyalty_vs_promo
+    description: "Genuinely loyal vs promo-driven buyer segments."
+    columns:
+      - name: buyer_type
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_ideal_customer
+    description: "One-row statistical portrait of the Champions tier."
+
+  - name: mart_exec_snapshot
+    description: "Single-row executive KPI snapshot for the whole customer base."
+    columns:
+      - name: total_customers
+        tests:
+          - not_null

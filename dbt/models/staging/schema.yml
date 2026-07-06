@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: >
+      Typed staging view over customers_enriched.csv — one row per customer
+      (3,900 total) with all engineered features. Foundation for every mart.
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier (primary key)."
+        tests:
+          - not_null
+          - unique
+      - name: value_tier
+        description: "Quartile value tier."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Champions', 'Loyalists', 'Potential', 'At-Risk']
+      - name: is_loyal_value_sat
+        description: "Primary loyalty flag (value + satisfaction)."
+        tests:
+          - accepted_values:
+              values: [0, 1]
+      - name: estimated_annual_revenue
+        description: "purchase_amount_usd * purchase_frequency_per_year."
+        tests:
+          - not_null

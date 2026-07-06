@@ -1,0 +1,10 @@
+# Local DuckDB profile. Run dbt from the dbt/ directory with:
+#   dbt build --profiles-dir .
+# The DuckDB file (dev.duckdb) is disposable and gitignored.
+retail_customer_segmentation:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
+      threads: 4
