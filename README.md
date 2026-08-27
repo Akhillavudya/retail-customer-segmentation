@@ -100,14 +100,15 @@ python -c "import duckdb; print(duckdb.connect('dbt/dev.duckdb').sql('select * f
 
 ## Team & My Contributions
 
-> Originally built as a **group project** by **[Your Name], [Teammate 2], [Teammate 3]**.
+> Originally built as a **group project** by **[Himanshu Kumar], [Akhil Lavudya]**.
 > _(Replace with the real team names before publishing.)_
 
 **My contributions:**
-- _[e.g. Python feature-engineering pipeline — value_score, promo_dependency, loyalty definitions]_
-- _[e.g. the SQL segmentation queries + dbt/DuckDB modeling and tests]_
-- _[e.g. Power BI / Tableau dashboard build]_
-- _[e.g. repo packaging, reproducibility, this README]_
+- Contributed to customer segmentation and analytical feature engineering.
+- Developed customer value and promo-dependency metrics.
+- Contributed SQL analysis for customer segmentation and business insights.
+- Supported dbt + DuckDB data modeling and validation.
+- Contributed to dashboard development and business reporting.
 
 _Fill these in with what you personally owned — only claim those on your CV._
 
